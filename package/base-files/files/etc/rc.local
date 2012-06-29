@@ -1,4 +1,8 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
 
+#NAT to Alice Gateway and prevent people messing with my modem
+iptables -t nat -A POSTROUTING -o eth0.2 -j MASQUERADE
+iptables -A FORWARD -d 192.168.1.0/24 -j DROP
+
 exit 0
