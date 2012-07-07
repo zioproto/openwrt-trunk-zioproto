@@ -1,0 +1,2 @@
+uci set dhcp.@dnsmasq[0].rebind_protection=0
+uci commit
