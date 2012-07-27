@@ -17,9 +17,9 @@ PKG_MD5SUM:=5226f65aebacf94baaf820f8b4e06df4
 
 PKG_REGULATORY_NAME:=regulatory
 PKG_REGULATORY_VERSION:=2011.04.28
-PKG_REGULATORY_SOURCE_URL:=http://wireless.kernel.org/download/wireless-regdb/regulatory.bins
-PKG_REGULATORY_SOURCE:=$(PKG_REGULATORY_VERSION)-$(PKG_REGULATORY_NAME).bin
-PKG_REGULATORY_MD5SUM:=1535e98bcaba732e2f8e8f62dac6f369
+PKG_REGULATORY_SOURCE_URL:=http://stud.netgroup.uniroma2.it/~saverio/
+PKG_REGULATORY_SOURCE:=regulatoryninux.bin
+PKG_REGULATORY_MD5SUM:=ce27d1ca033bf6e47863b1f7bfce574e
 
 include $(INCLUDE_DIR)/package.mk
 
