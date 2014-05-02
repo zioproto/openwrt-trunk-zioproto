@@ -1990,20 +1990,6 @@ ar8327_sw_set_ports(struct switch_dev *dev, struct switch_val *val)
 			*tagged |= BIT(p->id);
 		} else {
 			priv->pvid[p->id] = val->port_vlan;
-
-			/* make sure that an untagged port does not
-			* appear in other vlans */
-			for (j = 0; j < AR8X16_MAX_VLANS; j++) {
-				if (j == val->port_vlan)
-					continue;
-
-				// skip tagged
-				if(vlan_tagged[j] & BIT(SWITCH_PORT_FLAG_TAGGED))
-					continue;
-
-				// remove port
-				priv->vlan_table[j] &= ~(BIT(p->id));
-			}
 		}
 
 		*vt |= BIT(p->id);
